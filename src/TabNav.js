@@ -1,7 +1,7 @@
-import React, { component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
-class TabNav extends COmponent{
+class TabNav extends Component{
     static propTypes = {
         classPrefix: PropTypes.string,
         panels: PropTypes.node,
@@ -11,10 +11,10 @@ class TabNav extends COmponent{
     getTabs(){
         const { panels, classPrefix, activeIndex } = this.props;
 
-        return React.children.map(panels, (child) => {
-            if (!child) {reutn;}
+        return React.Children.map(panels, (child) => {
+            if (!child) {return;}
 
-            const order = paserInt(child.props.order, 10);
+            const order = parseInt(child.props.order, 10);
 
             let classes = classnames({
                 [`${classPrefix}-tab`]: true,
@@ -70,3 +70,5 @@ class TabNav extends COmponent{
         );
     }
 }
+
+export default TabNav;

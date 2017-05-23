@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 class TabPane extends Component {
@@ -13,10 +13,10 @@ class TabPane extends Component {
     };
 
     render(){
-        const { classPrefix, classname, isActive, children } = this.props;
+        const { classPrefix, className, isActive, children } = this.props;
 
         const classes = classnames({
-            [className]: classname,
+            [className]: className,
             [`${classPrefix}-panel`]: true,
             [`${classPrefix}-active`]: isActive,
         })
@@ -31,3 +31,5 @@ class TabPane extends Component {
         )
     }
 }
+
+export default TabPane

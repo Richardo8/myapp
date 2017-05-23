@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component } from 'react';
 import Tabs from './Tabs';
 import TabPane from './TabPane';
 
@@ -6,7 +6,7 @@ class App extends Component {
     constructor(props){
         super(props);
 
-        this.handelChange = this.handleChange.bind(this);
+        this.handelChange = this.handelChange.bind(this);
 
         this.state = {
             activeIndex: 0,
@@ -25,7 +25,7 @@ class App extends Component {
             <div>
                 <div className="operator">
                     <span>切换Tab：</span>
-                    <select value={this.state.activeIndex} onchange={this.handelChange}>
+                    <select value={this.state.activeIndex} onChange={this.handelChange}>
                         <option value="0">Tab1</option>
                         <option value="1">Tab2</option>
                         <option value="2">Tab3</option>

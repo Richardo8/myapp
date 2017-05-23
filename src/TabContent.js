@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 class TabContent extends Component {
@@ -40,3 +40,5 @@ class TabContent extends Component {
         )
     }
 }
+
+export default TabContent;

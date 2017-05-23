@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import style from './style.scss';
 import TabContent from './TabContent';
@@ -23,7 +23,9 @@ class Tabs extends Component {
     }
 
     constructor(props) {
-        super(porps);
+        super(props);
+
+        this.handleTabClick = this.handleTabClick.bind(this);
 
         const currProps = this.props;
 
