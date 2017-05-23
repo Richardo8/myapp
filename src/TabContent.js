@@ -9,7 +9,7 @@ class TabContent extends Component {
     };
 
     getTabPanes(){
-        const { calssPrefix, activeIndex, panels } = this.props;
+        const { classPrefix, activeIndex, panels } = this.props;
 
         return React.Children.map(panels, (child) => {
             if(!child) {return;}
