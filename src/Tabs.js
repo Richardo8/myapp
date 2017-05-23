@@ -1,6 +1,8 @@
 import React, { Component, PropTypes, cloneElement } from 'react';
 import classnames from 'classnames';
 import style from './style.scss';
+import TabContent from './TabContent';
+import TabNav from './TabNav';
 
 class Tabs extends Component {
     static propTypes = {
@@ -64,7 +66,7 @@ class Tabs extends Component {
         const { classPrefix, children } = this.props;
 
         return (
-            <tabNav
+            <TabNav
                 key="tabBar"
                 classPrefix={classPrefix}
                 onTabClick={this.handleTabClick}
