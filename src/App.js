@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Tabs from './Tabs';
 import TabPane from './TabPane';
+import style from './style.scss';
+
 
 class App extends Component {
     constructor(props){
