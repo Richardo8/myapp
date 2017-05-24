@@ -15,6 +15,7 @@ class App extends Component {
     }
 
     handelChange(e){
+        console.log(parseInt(e.target.value, 10));
         this.setState({
             activeIndex: parseInt(e.target.value, 10),
         });

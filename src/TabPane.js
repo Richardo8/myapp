@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 class TabPane extends Component {
@@ -23,7 +24,7 @@ class TabPane extends Component {
 
         return (
             <div
-                role="tabpane1"
+                role="tabpanel"
                 className={classes}
                 aria-hidden={!isActive}>
                 {children}
