@@ -4,14 +4,12 @@ class Select extends Component {
     constructor(props){
         super(props);
 
-        this.handleChange = (e) => {};
-
         this.state = {
             area: ['beijing', 'shanghai']
         }
     }
 
-    handleChange(e){
+    handleChange = (e) => {
         const { options } = e.target;
         const area = Object.keys(options)
             .filter(i => options[i].selected === true)
@@ -20,7 +18,7 @@ class Select extends Component {
         this.setState({
             area,
         })
-    }
+    };
 
     render(){
         const { area } = this.state;
