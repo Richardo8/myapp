@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tabs from './Tabs';
 import TabPane from './TabPane';
+import Select from './Select';
 
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
                     <TabPane order="1" tab={'Tab2'}>第二个Tab中的内容</TabPane>
                     <TabPane order="2" tab={'Tab3'}>第三个Tab中的内容</TabPane>
                 </Tabs>
+                <Select/>
             </div>
         );
     }
