@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tabs from './Tabs';
 import TabPane from './TabPane';
 import Select from './Select';
+import Arrow from "./Arrow";
 
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
                     <TabPane order="2" tab={'Tab3'}>第三个Tab中的内容</TabPane>
                 </Tabs>
                 <Select/>
+                <Arrow/>
             </div>
         );
     }
