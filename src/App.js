@@ -3,6 +3,7 @@ import Tabs from './Tabs';
 import TabPane from './TabPane';
 import Select from './Select';
 import Arrow from "./Arrow";
+import Uncontrolled from "./Uncontrolled";
 
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
                 </Tabs>
                 <Select/>
                 <Arrow/>
+                <Uncontrolled/>
             </div>
         );
     }
