@@ -4,6 +4,7 @@ import TabPane from './TabPane';
 import Select from './Select';
 import Arrow from "./Arrow";
 import Uncontrolled from "./Uncontrolled";
+import MultiController from "./multiController";
 
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
                 <Select/>
                 <Arrow/>
                 <Uncontrolled/>
+                <MultiController/>
             </div>
         );
     }
