@@ -5,6 +5,7 @@ import Select from './Select';
 import Arrow from "./Arrow";
 import Uncontrolled from "./Uncontrolled";
 import MultiController from "./multiController";
+import List from "./UpCommunicate";
 
 
 class App extends Component {
@@ -12,6 +13,8 @@ class App extends Component {
         super(props);
 
         this.handelChange = this.handelChange.bind(this);
+
+        this.handelItemChange = this.handleItemChange.bind(this);
 
         this.state = {
             activeIndex: 0,
@@ -24,6 +27,9 @@ class App extends Component {
         });
     }
 
+    handleItemChange(item){
+
+    }
 
     render() {
         return (
@@ -45,6 +51,10 @@ class App extends Component {
                 <Arrow/>
                 <Uncontrolled/>
                 <MultiController/>
+                <List
+                    list={[{text: 1}, {text: 2}]}
+                    handleItemChange={this.handleItemChange}
+                />
             </div>
         );
     }
