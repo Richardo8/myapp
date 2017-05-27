@@ -6,6 +6,9 @@ import Arrow from "./Arrow";
 import Uncontrolled from "./Uncontrolled";
 import MultiController from "./multiController";
 import List from "./UpCommunicate";
+import List1 from "./noComunicate";
+import emitter from './events';
+
 
 
 class App extends Component {
@@ -28,7 +31,17 @@ class App extends Component {
     }
 
     handleItemChange(item){
+        console.log(item);
+    }
 
+    componentDidMount(){
+        this.itemChange = emitter.addListener('ItemChange', (msg, data) => {
+            console.log(data)
+        })
+    }
+
+    componentWillUnmount(){
+        emitter.removeListener(this.itemChange);
     }
 
     render() {
@@ -55,6 +68,7 @@ class App extends Component {
                     list={[{text: 1}, {text: 2}]}
                     handleItemChange={this.handleItemChange}
                 />
+                <List1 list={[{text: 1}, {text: 2}]}/>
             </div>
         );
     }
